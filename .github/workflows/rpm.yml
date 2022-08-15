@@ -1,4 +1,4 @@
-name: Example workflow yml
+name: make rpm package
 
 on: [push]
 
