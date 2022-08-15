@@ -6,6 +6,8 @@ jobs:
   build:
     runs-on: ubuntu-20.04
     steps:
+    - name: Install python deps
+      run: sudo apt-get install python3-stdeb fakeroot python-all
     - uses: actions/checkout@v1
     - name: Package
       uses: bpicode/github-action-fpm@master
