@@ -4,14 +4,12 @@ on: [push]
 
 jobs:
   build:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     steps:
-    - name: Install python deps
-      run: sudo apt-get install python-setuptools
     - uses: actions/checkout@v1
     - name: Package
       uses: bpicode/github-action-fpm@master
       with:
         fpm_args: './build'
-        fpm_opts: '-s python -t deb hyper-shell'
+        fpm_opts: '-s python -t snap hyper-shell'
 
